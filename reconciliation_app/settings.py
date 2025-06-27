@@ -26,6 +26,9 @@ ALLOWED_HOSTS = ['codeperfectsolutions.co.ke', 'localhost', '127.0.0.1']
 DEBUG = False
 APPEND_SLASH = True
 CORS_ALLOW_ALL_ORIGINS = True # Set to True to allow all origins
+CORS_ALLOWED_ORIGINS = [
+    'https://0aa95ff8-dad8-4445-888b-ce3fa0734e37-00-3aq9iryqkwizo.kirk.replit.dev:8080'
+]
 
 CORS_ALLOW_METHODS = [
     "DELETE",
@@ -144,6 +147,7 @@ STATIC_ROOT = BASE_DIR / 'static'
 STATICFILES_DIRS = [
     BASE_DIR / 'staticfiles',
 ]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
