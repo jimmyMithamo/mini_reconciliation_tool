@@ -21,11 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-w86+y$(y42ywr12$062+9&c6l5f^d90)+lxh%t%&mi1&8kgg(%'
-
+ALLOWED_HOSTS = ['codeperfectsolutions.co.ke', 'localhost', '127.0.0.1']
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 APPEND_SLASH = False
-ALLOWED_HOSTS = []
 CORS_ALLOW_ALL_ORIGINS = True # Set to True to allow all origins
 
 CORS_ALLOW_METHODS = [
