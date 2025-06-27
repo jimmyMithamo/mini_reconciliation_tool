@@ -3,4 +3,4 @@ django-cors-headers
 djangorestframework
 numpy
 pandas
-
+whitenoise

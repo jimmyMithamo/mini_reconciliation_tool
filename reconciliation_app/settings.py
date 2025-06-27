@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-w86+y$(y42ywr12$062+9&c6l5f^d90)+lxh%t%&mi1&8kgg(%
 ALLOWED_HOSTS = ['codeperfectsolutions.co.ke', 'localhost', '127.0.0.1']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-APPEND_SLASH = False
+APPEND_SLASH = True
 CORS_ALLOW_ALL_ORIGINS = True # Set to True to allow all origins
 
 CORS_ALLOW_METHODS = [
@@ -64,6 +64,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -139,6 +140,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static'
+STATICFILES_DIRS = [
+    BASE_DIR / 'staticfiles',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
